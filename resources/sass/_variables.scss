@@ -1,11 +1,6 @@
-
-// Body
-$body-bg: #f8fafc;
-
 // Typography
-$font-family-sans-serif: "Nunito", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$family-sans-serif: "Lato", sans-serif;
+$family-monospace: "Ubuntu Mono", monospace;
 
 // Colors
 $blue: #3490dc;
@@ -18,3 +13,21 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+$blurple: #7289da;
+$greyple: #99aab5;
+$dark-not-black: #2c2f33;
+$nqblack: #23272a;
+
+// Body
+$body-background-color: $nqblack;
+
+$primary: $blurple;
+$info: $cyan;
+$success: $green;
+$warning: $orange;
+$danger: $red;
+$light: $greyple;
+$dark: $dark-not-black;
+$background: $nqblack;
+$text: white;
