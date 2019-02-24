@@ -8,6 +8,9 @@
 // Bulma
 @import '~bulma';
 
+// Bulma extensions
+@import '~bulma-pricingtable/src/sass/index';
+
 // Fontawesome
 @import '~@fortawesome/fontawesome-free/scss/brands';
 @import '~@fortawesome/fontawesome-free/scss/regular';
@@ -16,3 +19,6 @@
 
 // Animate.css
 @import '~animate.css';
+
+// Overrides
+@import 'overrides';
