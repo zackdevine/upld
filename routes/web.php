@@ -22,6 +22,7 @@ Route::prefix('docs')->group(function () {
 });
 
 Auth::routes();
+Route::get('/logout', function () { Auth::logout(); return redirect('/'); });
 Route::get('/profile', 'HomeController@profile')->name('profile');
 
 // User routes

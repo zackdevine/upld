@@ -1,5 +1,5 @@
 @extends ('_layouts.base')
-@section ('title', 'Login')
+@section ('title', 'Register')
 
 @section ('content')
 
