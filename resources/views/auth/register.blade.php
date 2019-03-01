@@ -19,7 +19,7 @@
                             <div class="field">
                                 <label class="label">Username</label>
                                 <div class="control has-icons-left has-icons-right">
-                                    <input class="input{{ $errors->has('username') ? 'has-danger' : '' }}" type="text" placeholder="username" name="username">
+                                    <input class="input {{ $errors->has('username') ? 'has-danger' : '' }}" type="text" placeholder="username" name="username">
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-user"></i>
                                     </span>
@@ -32,7 +32,7 @@
                             <div class="field">
                                 <label class="label">Email address</label>
                                 <div class="control has-icons-left has-icons-right">
-                                    <input class="input{{ $errors->has('email') ? 'has-danger' : '' }}" type="text" placeholder="you@example.com" name="email">
+                                    <input class="input {{ $errors->has('email') ? 'has-danger' : '' }}" type="text" placeholder="you@example.com" name="email">
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-envelope"></i>
                                     </span>
@@ -45,7 +45,7 @@
                             <div class="field">
                                 <label class="label">Password</label>
                                 <div class="control has-icons-left has-icons-right">
-                                    <input class="input{{ $errors->has('password') ? 'has-danger' : '' }}" type="password" placeholder="password" name="password">
+                                    <input class="input {{ $errors->has('password') ? 'has-danger' : '' }}" type="password" placeholder="password" name="password">
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-lock"></i>
                                     </span>
@@ -58,7 +58,7 @@
                             <div class="field">
                                 <label class="label">Confirm password</label>
                                 <div class="control has-icons-left has-icons-right">
-                                    <input class="input{{ $errors->has('password_confirmation') ? 'has-danger' : '' }}" type="password" placeholder="confirm password" name="password_confirmation">
+                                    <input class="input {{ $errors->has('password_confirmation') ? 'has-danger' : '' }}" type="password" placeholder="confirm password" name="password_confirmation">
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-lock"></i>
                                     </span>

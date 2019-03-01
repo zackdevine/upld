@@ -25,6 +25,7 @@
     "dependencies": {
         "animate.css": "^3.7.0",
         "bulma": "^0.7.4",
-        "bulma-pricingtable": "^0.2.0"
+        "bulma-pricingtable": "^0.2.0",
+        "bulma-toast": "^1.5.0"
     }
 }

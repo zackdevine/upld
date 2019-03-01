@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="pricing-plan">
-                        <div class="plan-header">Pro+</div>
+                        <div class="plan-header">Premium</div>
                         <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>10</span>/month</div>
                         <div class="plan-items">
                             <div class="plan-item">Free subdomain</div>
@@ -75,7 +75,7 @@
                             <div class="plan-item">Large file size limit (2 GB)</div>
                         </div>
                         <div class="plan-footer">
-                            <a href="{{ route('register') }}" class="button is-fullwidth is-primary is-bold is-rounded">Get started with Pro+</a>
+                            <a href="{{ route('register') }}" class="button is-fullwidth is-primary is-bold is-rounded">Get started with Premium</a>
                         </div>
                     </div>
 

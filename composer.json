@@ -14,6 +14,8 @@
         "laravel/cashier": "^9.1",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
+        "league/flysystem-aws-s3-v3": "~1.0",
+        "league/flysystem-cached-adapter": "~1.0",
         "php-http/curl-client": "^1.7",
         "sentry/sentry-laravel": "1.0.0-beta5"
     },

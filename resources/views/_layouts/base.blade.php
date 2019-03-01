@@ -7,6 +7,15 @@
         <title>@yield ('title') / {{ config('app.name') }}</title>
         <link rel="stylesheet" href="{{ asset("css/app.css") }}">
         <script src="{{ asset("js/app.js") }}"></script>
+        @if (config('services.stripe.enabled'))
+            <script src="https://js.stripe.com/v3"></script>
+            <script type="text/javascript">
+                var stripe = Stripe('pk_test_i1Gmdi32cUYMEDW8dcik1evl',
+                {
+                    betas: ['checkout_beta_4']
+                });
+            </script>
+        @endif
         <script type="text/javascript">
             function animateCss(element, animationName, callback) {
                 const node = document.querySelector(element)

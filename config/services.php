@@ -31,12 +31,38 @@ return [
     ],
 
     'stripe' => [
+        'enabled' => env('USE_STRIPE', false),
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
         'webhook' => [
             'secret' => env('STRIPE_WEBHOOK_SECRET'),
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
+        ],
+    ],
+
+    'upld' => [
+        'enabled' => env('UPLD_LIMITS', false),
+        'filesize' => [
+            'free' => env('UPLD_FILESIZE_FREE', 8),
+            'basic' => env('UPLD_FILESIZE_BASIC', 100),
+            'pro' => env('UPLD_FILESIZE_PRO', 500),
+            'premium' => env('UPLD_FILESIZE_PREMIUM', 0),
+            'none' => 0
+        ],
+        'retention' => [
+            'free' => env('UPLD_RETENTION_FREE', 60),
+            'basic' => env('UPLD_RETENTION_BASIC', 120),
+            'pro' => env('UPLD_RETENTION_PRO', 356),
+            'premium' => env('UPLD_RETENTION_PREMIUM', 0),
+            'none' => 0
+        ],
+        'domains' => [
+            'free' => env('UPLD_DOMAINS_FREE', 0),
+            'basic' => env('UPLD_DOMAINS_BASIC', 1),
+            'pro' => env('UPLD_DOMAINS_PRO', 3),
+            'premium' => env('UPLD_DOMAINS_PREMIUM', 5),
+            'none' => 0
         ],
     ],
 
