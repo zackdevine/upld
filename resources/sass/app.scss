@@ -1,10 +1,9 @@
-//////////////////////////////////////////////////////////////////////
-// You can use this file to modify the base styling of Disboard.
-// Please see the documentation page on theming to fully
-// understand what everything does here.
-//////////////////////////////////////////////////////////////////////
-
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro&display=swap');
+@import '~@fortawesome/fontawesome-pro/scss/brands';
+@import '~@fortawesome/fontawesome-pro/scss/duotone';
+@import '~@fortawesome/fontawesome-pro/scss/light';
+@import '~@fortawesome/fontawesome-pro/scss/regular';
+@import '~@fortawesome/fontawesome-pro/scss/solid';
+@import '~@fortawesome/fontawesome-pro/scss/fontawesome';
 @import "variables";
 @import "~bulma";
-@import "../../node_modules/bulma-o-steps/bulma-steps.sass";

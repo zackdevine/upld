@@ -20,6 +20,7 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-pro": "^5.13.1",
         "bulma": "^0.8.0"
     }
 }

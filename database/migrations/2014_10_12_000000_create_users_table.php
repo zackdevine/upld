@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('discrim')->nullable();
             $table->text('avatar')->nullable();
             $table->string('access_token')->nullable();
+            $table->string('api_key', 32)->nullable()->unique();
             $table->rememberToken();
             $table->timestamps();
         });

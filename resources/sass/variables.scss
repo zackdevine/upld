@@ -1,1 +1,55 @@
+// Fonts
+
 $family-sans-serif: 'Lato', sans-serif;
+$family-secondary: 'Source Sans Pro', sans-serif;
+
+
+
+// Colors
+
+$white: #FAFAF2;
+$black: #23272A;
+$white-ter: #99AAB5;
+$grey-darker: #2C2F33;
+$turquoise: #1ABC9C;
+$blue: #7289DA;
+$cyan: #618BD9;
+$green: #2ECC71;
+$yellow: #E3AE42;
+$red: #E31E1E;
+
+$scheme-main: $black;
+$scheme-main-bis: $grey-darker;
+$scheme-main-ter: $grey-darker;
+$scheme-invert: $white;
+$scheme-invert-ter: $white-ter;
+$background: $grey-darker;
+
+$primary: $blue;
+$secondary: $cyan;
+
+$text: $white-ter;
+$text-light: $grey-darker;
+$text-strong: $white;
+
+
+
+// Box
+
+$box-background-color: $grey-darker;
+$box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+
+
+
+// Menu
+
+$menu-label-color: $white;
+
+
+
+// Overrides
+
+h1:not(.subtitle), h2:not(.subtitle), h3:not(.subtitle), h4:not(.subtitle), h5:not(.subtitle), h6:not(.subtitle)
+{
+    font-family: $family-secondary;
+}

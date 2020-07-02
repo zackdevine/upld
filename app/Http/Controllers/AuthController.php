@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Socialite;
 
 class AuthController extends Controller
@@ -31,9 +32,15 @@ class AuthController extends Controller
                     'avatar'        => $user->avatar,
                     'access_token'  => $user->token
                 ]
-                );
-                Auth::loginUsingId($userAuth->id);
-                return redirect()->intended('/');
+            );
+
+            if (is_null($userAuth->api_key))
+            {
+                $this->genAPIKey($userAuth);
+            }
+
+            Auth::loginUsingId($userAuth->id);
+            return redirect()->intended('/');
         }
     }
 
@@ -41,5 +48,16 @@ class AuthController extends Controller
     {
         Auth::logout();
         return redirect('/');
+    }
+
+    private function genAPIKey (User $user)
+    {
+        $apikey = Str::random(32);
+        while (!is_null(User::where('api_key', $apikey)->first()))
+        {
+            $apikey = Str::random(32);
+        }
+        $user->api_key = $apikey;
+        $user->save();
     }
 }

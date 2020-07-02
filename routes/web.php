@@ -11,8 +11,16 @@
 |
 */
 
-// Basic Homepage Route
-Route::get('/', function () { return view('home'); })->name('home');
+Route::get('/', 'AppController@home')->name('home');
+Route::get('/dlcfg/{type}', 'AppController@downloadConfig');
+
+Route::post('upload', 'UploadController@postUpload')->name('uploadImage');
+
+Route::prefix('~')->group(function ()
+{
+    Route::get('{fileid}', 'UploadController@getUpload');
+});
+
 
 // Discord Authentication Routes
 Route::prefix('auth')->group(function ()
