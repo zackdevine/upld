@@ -2,10 +2,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ route('home') }}">
-                <span class="icon">
-                    <i class="fad fa-cloud-upload fa-lg"></i>
-                </span>
-                &nbsp;&nbsp;<strong>{{ config('app.name') }}</strong>
+                <img src="{{ secure_asset('img/upld.png') }}" style="border-radius: 50%; height: 32px;">
             </a>
         </div>
         <div class="navbar-start">

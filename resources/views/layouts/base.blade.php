@@ -7,6 +7,7 @@
         <title>@yield('page.title') - {{ config('app.name') }}</title>
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="icon" type="image/png" href="{{ secure_asset('img/upld.png') }}">
     </head>
     <body>
         @yield ('page.content')

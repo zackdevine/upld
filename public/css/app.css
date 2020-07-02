@@ -1,6 +1,9 @@
-@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;
+@import url(https://fonts.googleapis.com/css2?family=Lato&family=Maven+Pro&display=swap);@charset "UTF-8";
 
-0,700;1,400&family=Source+Sans+Pro&display=swap);@charset "UTF-8";
+/*!
+ * Font Awesome Pro 5.13.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ */
 
 @font-face {
   font-family: "Font Awesome 5 Brands";
@@ -17003,7 +17006,20 @@ h3:not(.subtitle),
 h4:not(.subtitle),
 h5:not(.subtitle),
 h6:not(.subtitle) {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
+}
+
+#tabs-with-content .tabs:not(:last-child) {
+  margin-bottom: 0;
+}
+
+#tabs-with-content .tab-content {
+  padding: 1rem;
+  display: none;
+}
+
+#tabs-with-content .tab-content.is-active {
+  display: block;
 }
 
 /*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */
@@ -18266,7 +18282,7 @@ a.has-text-danger:focus {
 }
 
 .is-family-secondary {
-  font-family: "Source Sans Pro", sans-serif !important;
+  font-family: "Maven Pro", sans-serif !important;
 }
 
 .is-family-sans-serif {

@@ -1,7 +1,7 @@
 // Fonts
 
 $family-sans-serif: 'Lato', sans-serif;
-$family-secondary: 'Source Sans Pro', sans-serif;
+$family-secondary: 'Maven Pro', sans-serif;
 
 
 
@@ -52,4 +52,22 @@ $menu-label-color: $white;
 h1:not(.subtitle), h2:not(.subtitle), h3:not(.subtitle), h4:not(.subtitle), h5:not(.subtitle), h6:not(.subtitle)
 {
     font-family: $family-secondary;
+}
+
+
+
+// Addons
+
+// https://eiji.dev/bulma-tabs-with-content.html
+#tabs-with-content .tabs:not(:last-child) {
+  margin-bottom: 0;
+}
+
+#tabs-with-content .tab-content {
+  padding: 1rem;
+  display: none;
+}
+
+#tabs-with-content .tab-content.is-active {
+  display: block;
 }

@@ -13,4 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('upload', 'UploadController@doUpload');
+Route::prefix('upload')->group(function ()
+{
+    Route::post('/', 'UploadController@doUpload');
+    Route::post('/discord', 'UploadController@doDiscordUpload');
+});

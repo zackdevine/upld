@@ -10,7 +10,7 @@ class Upload extends Model
 {
     protected $fillable = [ 'file_id', 'author', 'path', 'size', 'mime_type' ];
     protected $dates    = [ 'created_at', 'updated_at', 'deleted_at' ];
-    protected $appends  = [ 'url', 'size_in_kb' ];
+    protected $appends  = [ 'url', 'size_in_kb', 's3_path' ];
 
     public function getUrlAttribute ()
     {
@@ -21,6 +21,11 @@ class Upload extends Model
     public function getSizeInKbAttribute ()
     {
         return round($this->size / 1024, 2);
+    }
+
+    public function getS3PathAttribute ()
+    {
+        return Storage::disk('s3')->url($this->path);
     }
 
     public function user ()
