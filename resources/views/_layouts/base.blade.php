@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
     
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@yield('page.title') &raquo; {{ config('app.name') }}</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        {{-- <link rel="icon" href="{{ asset('favicon.png') }}"> --}}
+        <link rel="icon" href="{{ asset('favicon.png') }}">
         <script src="https://kit.fontawesome.com/aebee420ce.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
 
-        <section class="hero @yield('hero.size', 'is-large') @yield('hero.color', 'is-dark') is-bold" id="page-header">
+        <section class="hero @yield('hero.size', 'is-large') @yield('hero.color', 'is-primary') is-bold" id="page-header">
         
             <div class="hero-head">
             

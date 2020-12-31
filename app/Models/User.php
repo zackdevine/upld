@@ -67,4 +67,19 @@ class User extends Authenticatable
         return Guild::hydrate(Cache::get("user.$this->user_id.guilds"));
     }
 
+    public function uploads ()
+    {
+        return $this->hasMany(UserUpload::class);
+    }
+
+    public function getSubdomainAttribute ()
+    {
+        return Subdomain::firstWhere('user_id', $this->id)->subdomain ?? '';
+    }
+
+    public function getDomainAttribute ()
+    {
+        return Domain::firstWhere('user_id', $this->id)->domain ?? '';
+    }
+
 }

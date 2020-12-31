@@ -12,10 +12,12 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "intervention/image": "^2.5",
         "jenssegers/model": "^1.4",
         "laravel-notification-channels/discord": "^1.2",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
+        "league/flysystem-aws-s3-v3": "~1.0",
         "rmccue/requests": "^1.7",
         "socialiteproviders/discord": "^4.1"
     },

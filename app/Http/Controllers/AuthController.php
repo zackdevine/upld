@@ -20,7 +20,7 @@ class AuthController extends Controller
     public function redirectToDiscord()
     {
         return Socialite::driver('discord')
-            ->setScopes([ 'identify', 'guilds' ])
+            ->setScopes([ 'identify' ])
             ->redirect();
     }
 
@@ -39,11 +39,16 @@ class AuthController extends Controller
                 ]
             ))
             {
+                if (is_null($user->api_token))
+                {
+                    $user->api_token = Str::random(32);
+                    $user->save();
+                }
                 Auth::loginUsingId($user->id);
             }
         }
 
-        return redirect('/');
+        return redirect()->intended();
     }
 
     public function handleLogout()

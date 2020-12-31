@@ -1,7 +1,12 @@
-<nav class="navbar is-transparent">
+<nav class="navbar is-light is-fixed-top">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item" href="{{ route('app.home') }}">{{ config('app.name') }}</a>
+            <a class="navbar-item" href="{{ route('app.home') }}">
+                <p class="image is-rounded">
+                    <img src="{{ asset('favicon.png') }}" class="is-rounded">
+                </p>
+                &nbsp;&nbsp;{{ config('app.name') }}
+            </a>
 
             <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -21,19 +26,14 @@
                     <span>&nbsp;&nbsp;Home</span>
                 </a>
 
-                <a class="navbar-item" href="{{ route('docs.home') }}">
+                @auth
+                <a class="navbar-item" href="{{ route('user.upload') }}">
                     <span class="icon">
-                        <i class="fad fa-terminal fa-fw"></i>
+                        <i class="fad fa-file-upload fa-fw"></i>
                     </span>
-                    <span>&nbsp;&nbsp;Docs</span>
+                    <span>&nbsp;&nbsp;Upload</span>
                 </a>
-
-                <a class="navbar-item" href="https://github.com/zackdevine/disboard" target="_blank">
-                    <span class="icon">
-                        <i class="fab fa-github fa-fw"></i>
-                    </span>
-                    <span>&nbsp;&nbsp;GitHub</span>
-                </a>
+                @endauth
 
             </div>
             
@@ -48,7 +48,7 @@
 
                         <div class="navbar-dropdown is-right">
 
-                            <a class="navbar-item" href="{{ route('app.user') }}">
+                            <a class="navbar-item" href="{{ route('user.home') }}">
                                 <span class="icon">
                                     <i class="fad fa-user fa-fw"></i>
                                 </span>
