@@ -1,24 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Ubuntu+Mono&display=swap');
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Lato|Ubuntu+Mono');
-
-// Variables
-@import 'variables';
-
-// Bulma
-@import '~bulma';
-
-// Bulma extensions
-@import '~bulma-pricingtable/src/sass/index';
-
-// Fontawesome
-@import '~@fortawesome/fontawesome-free/scss/brands';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-
-// Animate.css
-@import '~animate.css';
-
-// Overrides
-@import 'overrides';
+@import "variables";
+@import "~bulma";

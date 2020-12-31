@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,38 +13,15 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/features', 'HomeController@features')->name('features');
-Route::get('/plans', 'HomeController@plans')->name('plans');
-Route::get('/download', 'HomeController@download')->name('download');
+Route::view('/', 'app.home')->name('app.home');
 
-Route::prefix('docs')->group(function () {
-	Route::get('/', 'DocsController@index')->name('docs');
-	Route::get('/{page}', 'DocsController@view');
+Route::view('/user', 'app.user')->middleware('auth')->name('app.user');
+
+Route::prefix('/docs')->group(function ()
+{
+    Route::view('/', 'docs.home')->name('docs.home');
+    Route::get('{category}/{page}', function($category, $page)
+    {
+        return view("docs.$category.$page") ?? abort(404);
+    });
 });
-
-// User routes
-Auth::routes();
-Route::get('/logout', function () { Auth::logout(); return redirect('/'); });
-Route::prefix('profile')->group(function () {
-	Route::get('/', 'UserController@index')->name('profile');
-	if (config('services.stripe.enabled')) { Route::get('/plans', 'UserController@choosePlan'); }
-
-	Route::get('/download/{type}', 'UserController@downloadProfile');
-});
-
-// User routes
-Route::domain('{username}.upld.app')->group(function ($username) {
-	Route::get('/', function () { redirect()->away(config('app.url')); });
-	Route::get('/{file}', 'UserController@getFile');
-});
-
-
-
-// Stripe webhook
-if (config('services.stripe.enabled')) {
-	Route::post(
-	    'stripe/webhook',
-	    '\App\Http\Controllers\StripeController@handleWebhook'
-	);
-}

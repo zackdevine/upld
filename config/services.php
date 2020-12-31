@@ -8,9 +8,9 @@ return [
     |--------------------------------------------------------------------------
     |
     | This file is for storing the credentials for third party services such
-    | as Stripe, Mailgun, SparkPost and others. This file provides a sane
-    | default location for this type of information, allowing packages
-    | to have a conventional place to find your various credentials.
+    | as Mailgun, Postmark, AWS and more. This file provides the de facto
+    | location for this type of information, allowing packages to have
+    | a conventional file to locate the various service credentials.
     |
     */
 
@@ -20,50 +20,21 @@ return [
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
     ],
 
+    'postmark' => [
+        'token' => env('POSTMARK_TOKEN'),
+    ],
+
     'ses' => [
-        'key' => env('SES_KEY'),
-        'secret' => env('SES_SECRET'),
-        'region' => env('SES_REGION', 'us-east-1'),
+        'key' => env('AWS_ACCESS_KEY_ID'),
+        'secret' => env('AWS_SECRET_ACCESS_KEY'),
+        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
-    'sparkpost' => [
-        'secret' => env('SPARKPOST_SECRET'),
-    ],
-
-    'stripe' => [
-        'enabled' => env('USE_STRIPE', false),
-        'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
-        'webhook' => [
-            'secret' => env('STRIPE_WEBHOOK_SECRET'),
-            'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
-        ],
-    ],
-
-    'upld' => [
-        'enabled' => env('UPLD_LIMITS', false),
-        'filesize' => [
-            'free' => env('UPLD_FILESIZE_FREE', 8),
-            'basic' => env('UPLD_FILESIZE_BASIC', 100),
-            'pro' => env('UPLD_FILESIZE_PRO', 500),
-            'premium' => env('UPLD_FILESIZE_PREMIUM', 0),
-            'none' => 0
-        ],
-        'retention' => [
-            'free' => env('UPLD_RETENTION_FREE', 60),
-            'basic' => env('UPLD_RETENTION_BASIC', 120),
-            'pro' => env('UPLD_RETENTION_PRO', 356),
-            'premium' => env('UPLD_RETENTION_PREMIUM', 0),
-            'none' => 0
-        ],
-        'domains' => [
-            'free' => env('UPLD_DOMAINS_FREE', 0),
-            'basic' => env('UPLD_DOMAINS_BASIC', 1),
-            'pro' => env('UPLD_DOMAINS_PRO', 3),
-            'premium' => env('UPLD_DOMAINS_PREMIUM', 5),
-            'none' => 0
-        ],
+    'discord' => [
+        'client_id'     => env('DISCORD_ID'),
+        'client_secret' => env('DISCORD_SECRET'),
+        'redirect'      => env('DISCORD_REDIRECT'),
+        'token'         => env('DISCORD_TOKEN')
     ],
 
 ];
